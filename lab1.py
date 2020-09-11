@@ -105,9 +105,10 @@ import math
 """
     #7 Все перестановки трехзначного числа
 """
-n = int(input())
-
-
+from itertools import permutations
+n = input()
+perm = list(filter(lambda x: x > 99, list(set([int(''.join(x)) for x in permutations([x for x in n])])))) 
+print(perm)
 
 
 """
